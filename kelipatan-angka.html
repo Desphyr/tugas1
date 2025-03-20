@@ -2,34 +2,111 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Kelipatan Angka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masukkan Kelipatan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            background-color: #d4edda; 
+        }
+        .form-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="number"] {
+            padding: 8px;
+            width: 100px;
+            margin-right: 5px;
+        }
+        button {
+            padding: 8px 12px;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Kelipatan Angka</h2>
+    <h1>Masukkan Kelipatan</h1>
+    <div class="form-container">
+        <label for="kelipatan">Masukkan Kelipatan:</label>
+        <input type="number" id="kelipatan" name="kelipatan" min="1" />
+        <button>Kirim</button>
+    </div>
 
-<label for="angka">Masukkan Angka:</label>
-<input type="number" id="angka">
-<button onclick="tampilkanKelipatan()">Tampilkan Kelipatan</button>
-
-<p id="hasil"></p>
-
-<script>
-    function tampilkanKelipatan() {
-        const angka = parseInt(document.getElementById('angka').value);
-        let hasil = "";
-
-        if (isNaN(angka) || angka <= 0) {
-            hasil = "Masukkan angka yang valid!";
-        } else {
-            for (let i = 1; i <= 10; i++) {
-                hasil += angka + " x " + i + " = " + (angka * i) + "<br>";
-            }
-        }
-
-        document.getElementById('hasil').innerHTML = hasil;
-    }
-</script>
+    <h2>Kelipatan dari Semua</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Angka</th>
+                <th>Kelipatan</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr>
+                <td>1</td>
+                <td class="highlight">1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="highlight">2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class="highlight">6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td class="highlight">8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
